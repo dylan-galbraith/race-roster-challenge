@@ -70,8 +70,14 @@
 }
 
 // Inputs
+@mixin label {
+  @include body-text;
+  padding-top: 1.25rem;
+}
 @mixin input {
   border: 1px solid #CCCCCC;
+  padding: 0.5rem;
+  margin-top: 0.625rem;
 }
 @mixin input-error {
   border: 1px solid $color-danger;

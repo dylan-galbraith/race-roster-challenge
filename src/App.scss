@@ -73,3 +73,53 @@
     margin-top: 1rem;
   }
 }
+
+.book {
+  @include container;
+  background-color: $color-default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content {
+    width: 36.5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    @include header-2;
+  }
+
+  &__text {
+    @include body-text;
+    padding-top: 1rem;
+  }
+
+  &__star {
+    color: $color-danger;
+  }
+
+  &__label {
+    @include label;
+  }
+
+  &__input {
+    @include input;
+  }
+
+  &__radio {
+    margin-top: 0.25rem;
+  }
+
+  &__button {
+    @include button-lg;
+    background-color: $primary-color-1;
+    color: white;
+    margin-top: 1.5rem;
+    width: 8.5rem;
+  }
+}
