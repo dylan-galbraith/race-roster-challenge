@@ -1,0 +1,83 @@
+@use './variables' as *;
+
+// Breakpoints
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+      @content;
+  } 
+}
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+      @content;
+  }
+}
+
+// Fonts
+@mixin header-1 {
+  font-size: 2.25rem;
+}
+@mixin header-2 {
+  font-size: 1.875rem;
+}
+@mixin header-3 {
+  font-size: 1.625rem;
+}
+@mixin header-4 {
+  font-size: 1.375rem;
+}
+@mixin header-5 {
+  font-size: 1.125rem;
+}
+@mixin body-text {
+  line-height: 1.4rem;
+}
+
+// Buttons
+@mixin button {
+  background-color: $color-default;
+  font-weight: 700;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+@mixin button-sm {
+  @include button;
+  padding: 5px 15px;
+}
+@mixin button-md {
+  @include button;
+  padding: 10px 25px;
+}
+@mixin button-lg {
+  @include button;
+  padding: 15px 35px;
+}
+@mixin button-pill-sm {
+  @include button-sm;
+  border-radius: 20px;
+}
+@mixin button-pill-md {
+  @include button-md;
+  border-radius: 40px;
+}
+@mixin button-pill-lg {
+  @include button-lg;
+  border-radius: 26px;
+}
+
+// Inputs
+@mixin input {
+  border: 1px solid #CCCCCC;
+}
+@mixin input-error {
+  border: 1px solid $color-danger;
+}
+
+// Others
+@mixin container {
+  padding: 6.25rem 7.5rem;
+}

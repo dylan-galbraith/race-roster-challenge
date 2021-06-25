@@ -1,0 +1,75 @@
+@use './partials/resets' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $font-color;
+  padding: 0.625rem 7.5rem;
+
+  &__buttons {
+    &__login {
+      @include button-pill-sm;
+      background-color: $font-color;
+      color: white;
+      margin-right: 1rem;
+    }
+    &__signup {
+      @include button-pill-sm;
+    }
+  }
+}
+
+.hero {
+  @include container;
+  background-image: url('./assets/images/hero-background.png');
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 40rem; 
+  }
+
+  &__heading {
+    @include header-1;
+  }
+
+  &__subheading {
+    @include header-3;
+    font-weight: 300;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  &__button {
+    @include button-pill-lg;
+    background-color: $primary-color-1;
+    color: white;
+  }
+}
+
+.featured {
+  @include container;
+  display: flex;
+
+  &__content {
+    margin-left: 1.875rem;
+  }
+
+  &__heading {
+    @include header-2;
+  }
+
+  &__text {
+    @include body-text;
+    margin-top: 1rem;
+  }
+}
