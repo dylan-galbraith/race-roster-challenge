@@ -85,5 +85,11 @@
 
 // Others
 @mixin container {
-  padding: 6.25rem 7.5rem;
+  padding: 4rem 1rem;
+  @include tablet {
+    padding: 6.25rem 3.5rem;
+  }
+  @include desktop {
+    padding: 6.25rem 7.5rem;
+  }
 }

@@ -4,7 +4,7 @@ import image from '../assets/images/heart-lamps.png';
 export default function Featured() {
   return (
     <div className="featured">
-      <img src={image} alt="Floating Heart Lanterns" />
+      <img className="featured__image" src={image} alt="Floating Heart Lanterns" />
       <div className="featured__content">
         <h2 className="featured__heading">Make your ticket holders happy</h2>
         <p className="featured__text">A beautiful little sunset. Talent is a pursued interest. That is to say, anything you practice you can do. This is probably the greatest thing that's ever happened in my life. These things happen automatically. All you have to do is just let them happen.</p>
