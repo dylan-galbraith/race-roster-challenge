@@ -123,6 +123,47 @@
     margin-top: 1.5rem;
     width: 8.5rem;
   }
+
+  &__loading {
+    display: flex;
+    align-items: center;
+    > img {
+      margin-right: 1rem;
+    }
+  }
+
+  &__complete {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  &__checkmark {
+    background-color: $color-success;
+    min-height: 8.67rem;
+    max-height: 8.67rem;
+    min-width: 8.67rem;
+    max-width: 8.67rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  &__error {
+    @include input-error;
+  }
+
+  &__errorMessage {
+    color: $color-danger;
+    font-size: 0.81rem;
+    font-weight: 700;
+  }
+
+  &__hidden {
+    display: none;
+  }
 }
 
 .footer {
